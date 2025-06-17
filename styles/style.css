@@ -1,1 +1,282 @@
-/* место для вашего кода */
+@import url(global.css);
+@import url(/fonts/fonts.css);
+
+* {
+    border: none;
+    z-index: 0; /*I don't know why it is not by default*/
+}
+
+section {
+    position: relative; /*For some reason i got static positions for <section>*/
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 293px;
+    place-items: center flex-start;
+}
+
+.header-nav {
+    flex: 0 0 392px;
+    display: block;
+    margin-left: 50px;
+}
+
+.header-nav ul{
+    list-style-type: circle;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    gap: 1.8em;
+}
+
+.no-bullet {
+  list-style: none;
+  padding-left: 0;
+}
+
+.header-logo {
+    background: url("/images/logo-black.svg") no-repeat;
+    flex: 1 1 148px;
+    height: 105px;
+    margin-left: 36px;
+}
+
+.header-contacts {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.3px;
+    flex: 1 1 240px;
+    margin-left: 184px;
+}
+
+.cover {
+    height: 757px;
+    width: 100%;
+    background: url("/images/cover.jpg") center;
+    z-index: -2;
+}
+
+.cover-container {
+    display: grid;
+    grid-template-rows: 165px 385px 106px 51px 50px;
+    color: white;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.cover-title {
+    display: flex;
+    margin: 0 auto;
+    grid-row: 2;
+    width: 1000px;
+    flex-direction: column;
+    place-items: left flex-start; 
+    text-transform: uppercase;
+    height: 115px;
+}
+
+.cover-title h1 {
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+}
+
+.sa-left {
+    align-self: flex-start;
+}
+
+.sa-center {
+    align-self: center;
+}
+.sa-right {
+    align-self: flex-end;
+}
+
+.cover-desc {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0px auto;
+    grid-row: 4;
+}
+
+.cover-desc h2{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    word-spacing: 1em;
+    text-transform: uppercase;
+
+}
+
+.cover-button {
+    color:white;
+    border: 1px solid white;
+    width: 255px;
+    text-transform: uppercase;
+    font-size: 22px;
+    background: transparent;
+}
+
+.lots{
+    display: grid;
+    grid-template-rows: 74px 596px 53px;
+    width: 1055px;
+    margin: 180px auto 0px;
+}
+
+.lots-header {
+    grid-row: 1;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 0px 41px;
+}
+
+.lots-container {
+    display: flex;
+    margin: auto;
+    gap: 25px;
+    grid-row: 2;
+}
+
+.lot-image-container {
+    position: absolute;
+    overflow: hidden;
+    width: 334px;
+    height: 596px;
+}
+
+.lot-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.image-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 50%;
+    z-index: -1;
+}
+
+.lot-desc-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 334px;
+    height: 596px;
+    color: white;
+    padding: 48px 40px;
+}
+
+.lot-link {
+    font-weight:  700;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.lot-desc {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.lots-footer {
+    font-weight: 400px;
+    font-size: 20px;
+    margin: 30px 41px;
+}
+
+.about {
+    display: flex;
+    gap: 72px;
+    margin: 120px auto 0;
+    height: 595px;
+    width: 1052px;
+}
+
+.about-logo {
+    margin: 35px 0 0 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 240px;
+    flex: 0 0 240px;
+    background: black;
+}
+
+.about-logo div{
+    height:114px;
+    width: 148px;
+    background: url("/images/logo-white.svg") no-repeat;
+}
+
+.about-desc {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    flex: 0 0 693px;
+    gap: 24px;
+}
+
+.about-title {
+    display: block;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.about-text {
+    display: block;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.footer {
+    display: flex;
+    margin: 180px 50px;
+}
+
+.footer-nav {
+    flex: 1 1 164px;
+    text-align: center;
+}
+
+.footer-nav ul{
+    list-style: none;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+    flex: 0 0 240px;
+}
+.footer-socials-link {
+    display: block;
+    height: 48px;
+    width: 48px;
+}
+.socials-yt {
+    background: url("/images/yt.svg") no-repeat;
+}
+.socials-vk {
+    background: url("/images/vk.svg") no-repeat;
+}
+.socials-pt {
+    background: url("/images/pinterest.svg") no-repeat;
+
+}
