@@ -1,1 +1,1 @@
-Оно тебе надо - первая проектная работа яндекс практикума.
+https://github.com/MikhailGot/ono-tebe-nado-fd
