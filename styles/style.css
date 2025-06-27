@@ -53,7 +53,7 @@
     position: relative;
     width: 100%;
     background: url("../images/cover.jpg") center;
-    z-index: -2;
+    background-size: cover ;
 }
 
 .cover-container {
@@ -105,6 +105,7 @@
     word-spacing: 0.8em;
     text-transform: uppercase;
     margin-bottom: 50px;
+    vertical-align: middle;
 }
 
 .cover-button {
@@ -117,11 +118,13 @@
     padding: 12px;
     margin-top: -12px;
     text-decoration: none;
+    text-align: center;
+    word-spacing: normal;
 }
 
 .lots{
     display: grid;
-    grid-template-rows: 74px 596px 53px;
+    grid-template-rows: 74px auto 53px;
     width: 1055px;
     margin: 180px auto 0px;
 }
@@ -136,26 +139,29 @@
 
 .lots-container {
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     gap: 25px;
     grid-row: 2;
 }
 
-.lot-image-container {
-    position: absolute;
-    overflow: hidden;
-    width: 334px;
-    height: 596px;
+.lot-frame {
+    display: block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
-.lot-image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
+.lot-card-1 {
+   background-image: url("../images/card-lot-01.jpg");
+}
+
+.lot-card-2 {
+   background-image: url("../images/card-lot-02.jpg"); 
+}
+
+.lot-card-3 {
+   background-image: url("../images/card-lot-03.jpg"); 
 }
 
 .image-overlay {
@@ -181,6 +187,11 @@
     font-weight:  700;
     font-size: 22px;
     text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.lot-link {
+    text-decoration: none;
 }
 
 .lot-desc {
@@ -210,7 +221,7 @@
     border-radius: 50%;
     height: 240px;
     flex: 0 0 240px;
-    background: black url("../images/logo-white.svg") center no-repeat;;
+    background: black url("../images/logo-white.svg") center no-repeat;
     background-size: 148px 114px;
 }
 
@@ -271,7 +282,7 @@
     padding-left: 0;
 }
 
-.footer-socials-link {
+.footer-socials-icon {
     display: block;
     height: 48px;
     width: 48px;
