@@ -23,11 +23,13 @@
     gap: 1.8em;
 }
 
-.header-nav ul li.active {
-  list-style: none;
-  padding-left: 0;
+.active-link {
+    text-decoration: none;
 }
 
+.no-bullet {
+    list-style-type: none;
+}
 .header-logo {
     background: url("../images/logo-black.svg") no-repeat;
     height: 105px;
@@ -267,10 +269,6 @@
 
 .footer-nav ul{
     list-style: none;
-}
-
-.footer-active-link {
-  text-decoration: none;
 }
 
 .footer-socials {
